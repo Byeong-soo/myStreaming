@@ -18,5 +18,5 @@ public class BoardVO {
 	private Integer reRef;
 	private Integer reLev;
 	private Integer reSeq;
-
+	
 }
