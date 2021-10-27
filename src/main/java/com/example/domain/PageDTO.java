@@ -56,6 +56,7 @@ public class PageDTO {
 		
 		
 		
+		
 	} // 생성자
 	
 }
