@@ -10,4 +10,5 @@ public class AttachVO {
 	private String filename; // 파일명
 	private String filetype; // 파일타입. 이미지 "I", 이미지 아니면 "O"
 	private int bno; // 첨부파일이 포함되는 게시글 번호
+	
 }
