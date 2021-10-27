@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<settings>
+		<!-- DB에서 데이터 조회 또는 삽입 등에서 null값 허용 -->
+		<setting name="jdbcTypeForNull" value="NULL" /> <!-- 삽입 null값 허용 -->
+		<setting name="callSettersOnNulls" value="true" /> <!-- 조회 null값 허용 -->
+		
+		<!-- 동일한 select문이 또 요청되는 경우, 기존 캐시된 내용으로 가져옴. 속도향상 -->
+		<setting name="cacheEnabled" value="true" />
+		
+		<!-- 테이블의 컬럼명과 VO 객체의 setter명의 연결 규칙을 설정 -->
+		<!-- 예시> 테이블의 컬럼명 reg_date는 regDate로 변경 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<typeAliases>
+		<!-- 패키지 안에 있는 클래스명으로 alias가 자동 부여됨. -->
+		<package name="com.example.domain"/>
+	</typeAliases>
+
+
+
+
+	<!-- 커넥션풀은 HikariCP를 사용하기 때문에 주석처리 -->
+	<!-- <environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments> -->
+</configuration>

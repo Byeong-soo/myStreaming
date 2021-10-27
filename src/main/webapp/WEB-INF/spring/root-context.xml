@@ -21,7 +21,7 @@
 	
 		<!--[datasource] 객체에 주입하기 위해 setter()를 통해 주입 - HikariDataSource 필드 초기화-->
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/jspdb?useUnicode=true&amp;characterEncoding=utf8&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=Asia/Seoul" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mystreamdb?useUnicode=true&amp;characterEncoding=utf8&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=Asia/Seoul" />
 		<property name="username" value="stid" />
 		<property name="password" value="1234" />
 	</bean>
