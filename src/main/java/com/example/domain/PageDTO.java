@@ -55,6 +55,7 @@ public class PageDTO {
 		next = endPage < realEnd;
 		
 		
+		
 	} // 생성자
 	
 }
