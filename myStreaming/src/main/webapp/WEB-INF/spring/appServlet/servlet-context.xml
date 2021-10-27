@@ -21,8 +21,11 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.example.myapp" />
+	<!-- 파일 업로드를 담당하는 spring 빈 등록 -->
+	<!-- 스프링 DispatcherServlet이 찾는 이름이 multipartResolver 아이디로 지정되어 있음에 주의! -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
 	
-	
+	<!-- 컨트롤러 패키지 scan -->
+	<context:component-scan base-package="com.example.controller" />
 	
 </beans:beans>
