@@ -1,0 +1,19 @@
+.modal-dialog.searchModal {
+  max-width: 100%;
+  height: 40%;
+  margin: 0;
+  padding: 0;
+}
+.modal-content.searchModal {
+  height: auto;
+  border-radius: 0;
+}
+
+#modalsearch {
+	margin-top: 35px;
+	margin-left: 150px;
+}
+
+#modallogo{
+	margin-left: 500px;
+}

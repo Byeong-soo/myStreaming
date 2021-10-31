@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%--<% session.setAttribute("id", "id"); %>--%>
+<link href="/resources/css/searchmodal.css" rel="stylesheet"/>
+
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
     <a class="navbar-brand" href="#"><img
             src="/resources/images/logo_transparent.png" alt="Logo"
@@ -16,7 +18,7 @@
         <div class="input-group ">
             <input type="text" class="form-control bg-light border-0 small "
                    placeholder="Search for..." aria-label="Search"
-                   aria-describedby="basic-addon2" id="search1">
+                   aria-describedby="basic-addon2" data-toggle="modal" data-target="#searchModal" onclick="search_click();">
             <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                     <i class="fas fa-search fa-sm"></i>
@@ -24,6 +26,46 @@
             </div>
         </div>
     </form>
+    
+    <div class="modal fade" id="searchModal" role="dialog">
+    <div class="modal-dialog searchModal">    
+      <div class="modal-content searchModal">
+        <div class="modal-header ">
+        
+			<a class="navbar-brand" href="#"><img
+            src="/resources/images/logo_transparent.png" alt="Logo"
+            style="width: 100px;" id="modallogo"></a>
+            
+		     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search justify-content-center ">
+		        <div class="input-group" id="modalsearch">
+		            <input type="text" class="form-control bg-light border-0 small "
+		                   placeholder="Search for..." aria-label="Search"
+		                   aria-describedby="basic-addon2">
+		            <div class="input-group-append">
+		                <button class="btn btn-primary" type="button">
+		                    <i class="fas fa-search fa-sm"></i>
+		                </button>
+		            </div>
+		        </div>
+		     </form>
+		            
+
+        </div>
+        <div class="modal-body">
+				<div>
+					<h4>최근 검색어</h4>
+				</div>
+        </div>
+        <div class="modal-footer">
+        		<div>
+        			<h4>실시간 인기</h4>
+        		</div>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+	</div>
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-md-5">
@@ -197,31 +239,6 @@
     </ul>
 </nav>
 
-<div class="modal fade" id="searchModal" role="dialog">
-    <div class="modal-dialog">    
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Selected Students</h4>
-        </div>
-        <div class="modal-body">
-          <p>Harry and Chris cleared the entrance exam.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-      
 
-<script>
-$(document).ready(function(){
-    $("#search1").click(function(){
-      $("#searchModal").modal("show");
-    });
-    $("#searchModal").on('show.bs.modal', function () {
-    });
-});
-</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="../resources/js/searchmodal.js"></script>
