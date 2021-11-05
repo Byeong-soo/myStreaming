@@ -54,14 +54,15 @@
 
 				<div href="#" class="nav__link" id="collapse">
 					<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
-					<span class="nav_name">Projects</span>
+					<span class="nav_name">Boards</span>
 
 					<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
 					<ul class="collapse__menu">
-						<a href="#" class="collapse__sublink">Data</a>
+						<a href="#" class="collapse__sublink">Q&A</a>
 						<a href="#" class="collapse__sublink">Group</a>
 						<a href="#" class="collapse__sublink">Members</a>
+						<a href="/boardCategory/list" class="collapse  sublink">boardCategory</a>
 					</ul>
 				</div>
 

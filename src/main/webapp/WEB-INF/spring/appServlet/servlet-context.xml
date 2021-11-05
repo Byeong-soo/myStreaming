@@ -42,11 +42,14 @@
  		<interceptor>
 			<mapping path="/member/*"/>
 			<mapping path="/board/*"/>
+			<mapping path="/boardCategory/*"/>
 			<exclude-mapping path="/member/login"/>
 			<exclude-mapping path="/member/register"/>
 			<exclude-mapping path="/member/join"/>
 			<exclude-mapping path="/board/list"/><!-- 글목록 -->
 			<exclude-mapping path="/board/content"/><!-- 상세보기 -->
+			<exclude-mapping path="/boardCategory/list"/>
+			<exclude-mapping path="/boardCategory/content"/>
 			<beans:bean class = "com.example.interceptor.LoginCheckInterceptor"/>
 		</interceptor>
 	</interceptors>
