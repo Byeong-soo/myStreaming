@@ -87,7 +87,7 @@
 					</td>
 				</tr>
 		</table>
-	 <div class="float-right">
+	 <div class="my-5 text-center">
 	 <%--로그인 했을때 --%>
 	   <c:if test="${ not empty sessionScope.id }">
 	 	<%--로그인 아이디와 글 작성자 아이디가 같을때 --%>
